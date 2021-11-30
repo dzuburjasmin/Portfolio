@@ -1,0 +1,657 @@
+@font-face {
+  font-family: GeomanistBold;
+  src: url(./font/geomanist-bold-webfont.woff);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Geomanist;
+  src: url(./font/geomanist-regular-webfont.woff);
+  font-weight: normal;
+}
+@keyframes pageloadcircle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes pageloadhi {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes vrtikotac {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes jljub {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #7850a8;
+  }
+}
+@keyframes jplav {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ad97c8;
+  }
+}
+@keyframes drawline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes moveskills1 {
+  0% {
+    transform: scale(100%);
+  }
+  25% {
+    transform: scale(87%) translateX(20px) translateY(20px);
+  }
+  75% {
+    transform: scale(113%) translateX(-20px) translateY(20px);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes moveskills2 {
+  0% {
+    transform: scale(100%);
+  }
+  25% {
+    transform: scale(113%) translateX(-20px) translateY(20px);
+  }
+  75% {
+    transform: scale(87%) translateX(-20px) translateY(-20px);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes moveskills3 {
+  0% {
+    transform: scale(100%);
+  }
+  25% {
+    transform: scale(87%) translateX(20px) translateY(-20px);
+  }
+  75% {
+    transform: scale(113%) translateX(20px) translateY(20px);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes moveskills4 {
+  0% {
+    transform: scale(100%);
+  }
+  25% {
+    transform: scale(110%) translateX(-20px) translateY(-20px);
+  }
+  75% {
+    transform: scale(87%) translateX(20px) translateY(-20px);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #272525;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: Geomanist;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.bold {
+  font-family: GeomanistBold;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+.iljub {
+  animation: jplav 0.2s 2.2s forwards;
+}
+.jljub {
+  animation: jljub 0.2s 2s forwards;
+}
+.wljub {
+  animation: jplav 0.2s 2.7s forwards;
+}
+.pljub {
+  animation: jplav 0.2s 2.9s forwards;
+}
+.nav-link {
+  color: white !important;
+}
+
+#homeCircle {
+  background-size: 41rem;
+  height: 50rem;
+  width: 50rem;
+  opacity: 80%;
+  border-bottom-left-radius: 100%;
+  position: absolute;
+  right: -8%;
+  top: -30%;
+
+  z-index: -1;
+}
+#root {
+  width: 100%;
+}
+.navbarToggle {
+  color: white !important;
+}
+#navmenu {
+  transition: 0.4s ease;
+}
+.hiImJasa {
+  font-weight: lighter;
+  color: white;
+}
+h1 {
+  font-size: 3.5rem;
+  color: white;
+}
+h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+h5 {
+  color: white;
+  font-size: 1.3rem;
+}
+p {
+  color: white;
+  font-size: 1rem;
+  max-width: 46ch;
+}
+.homepagetext {
+  animation: pageloadhi 1.5s 0s 1;
+  height: 100%;
+}
+.student li {
+  color: white;
+  list-style-type: none;
+}
+.outer {
+  color: #4fc3f7;
+  text-decoration: line-through;
+}
+.homelinks a svg {
+  fill: white;
+  margin: 0.5rem;
+  z-index: 3;
+}
+.homelinks svg {
+  fill: white;
+  margin: 0.5rem;
+  z-index: 3;
+  cursor: pointer;
+}
+.homelinks a svg:hover {
+  fill: #4fc3f7;
+  transition: 0.8s ease;
+}
+.homelinks svg:hover {
+  fill: #4fc3f7;
+  transition: 0.8s ease;
+}
+.homelinks {
+  margin-top: -6rem;
+  margin-bottom: 5rem;
+  z-index: 3;
+}
+.homecontainer {
+  height: 100vh;
+}
+
+@media screen and (max-width: 376px) {
+  .hiImJasa {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+  .navbar {
+    background-color: rgba(39, 37, 37, 0.8);
+  }
+  .educationtemplate {
+    max-width: 18ch;
+  }
+  .hiImJasa {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  .navbarToggle svg {
+    fill: white;
+  }
+  .navbarToggle svg:active {
+    fill: #4fc3f7;
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .animationContainer {
+    top: -20%;
+    height: 100vh;
+  }
+
+  #triangel3 img {
+    left: 15%;
+    top: 0%;
+  }
+  .homelinks {
+    margin-top: -10rem;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .hiImJasa {
+    margin-top: 10rem;
+  }
+  .animationContainer {
+    top: -25%;
+  }
+  #triangel3 img {
+    left: 15%;
+    top: 5%;
+  }
+  .homelinks {
+    margin-top: 6rem;
+    margin-bottom: -1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  .skillstext {
+    width: 40%;
+  }
+  .triangel img {
+    right: -15%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  .skillstext {
+    width: 40%;
+  }
+  .triangel img {
+    right: -15%;
+  }
+  .animationContainer {
+    top: -18%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  .hiImJasa {
+    font-size: 3.7rem;
+  }
+  .animationContainer {
+    top: -30%;
+  }
+  .skillstext {
+    width: 40%;
+  }
+  .triangel img {
+    right: -15%;
+  }
+}
+img {
+  height: auto;
+}
+
+.triangel img {
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
+  opacity: 0%;
+  right: -25%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.maxica {
+  max-height: 105vh;
+  position: absolute;
+  opacity: 35%;
+  top: 0%;
+}
+
+.aboutline {
+  left: 8%;
+  z-index: 0;
+  height: 90%;
+  width: 90%;
+}
+.linedraw {
+  stroke-width: 2px;
+  stroke: #7850a8;
+  fill: transparent;
+  stroke-dasharray: 1950;
+  stroke-dashoffset: 1950;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  filter: drop-shadow(3px 3px 2px rgba(82, 39, 138, 0.8));
+  height: 30vh;
+}
+#skillsCube {
+  position: absolute;
+  background-size: 50rem;
+  top: -17%;
+  left: -29%;
+  width: 35rem;
+  height: 35rem;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+#skillsCube2 {
+  position: absolute;
+  background-size: 50rem;
+  top: -28%;
+  left: -35%;
+  width: 45rem;
+  height: 45rem;
+  transform: rotate(49deg);
+
+  z-index: -1;
+}
+.skillscontainer {
+  min-height: 60vh;
+}
+.skillsflex {
+  display: inline-block;
+  height: 90%;
+}
+.skillscontainer h4 {
+  position: absolute;
+  color: #4fc3f7;
+  font-family: GeomanistBold;
+  font-size: 1.2rem;
+}
+.skillscontainer h4:hover {
+  color: #7850a8;
+  transition: 0.3s ease;
+}
+h4:nth-child(1) {
+  top: 13%;
+  left: 24%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(2) {
+  top: 30%;
+  left: 10%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(3) {
+  top: 41%;
+  left: 32%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(4) {
+  top: 61%;
+  left: 51%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(5) {
+  top: 9%;
+  left: 55%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(6) {
+  top: 50%;
+  left: 18%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(7) {
+  top: 82%;
+  left: 57%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(8) {
+  top: 10%;
+  left: 78%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(9) {
+  top: 44%;
+  left: 58%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(10) {
+  top: 63%;
+  left: 8%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(11) {
+  top: 4%;
+  left: 38%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(12) {
+  top: 60%;
+  left: 88%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(13) {
+  top: 35%;
+  left: 80%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1.4rem;
+}
+h4:nth-child(14) {
+  top: 72%;
+  left: 27%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(15) {
+  top: 87%;
+  left: 12%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(16) {
+  top: 20%;
+  left: 65%;
+  animation: moveskills1 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(17) {
+  top: 91%;
+  left: 41%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(18) {
+  top: 25%;
+  left: 47%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1.1rem;
+}
+h4:nth-child(19) {
+  top: 66%;
+  left: 73%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1.3rem;
+}
+h4:nth-child(20) {
+  top: 87%;
+  left: 78%;
+  animation: moveskills1 35s infinite linear;
+  font-size: 1.1rem;
+}
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 29rem 43rem 29rem;
+  opacity: 17%;
+  border-color: transparent transparent #838383 transparent;
+  position: absolute;
+  right: -32%;
+  top: -40%;
+  z-index: -2;
+  transform: rotate(15deg);
+}
+.triangel2 img {
+  width: 53rem;
+  height: 48rem;
+  position: absolute;
+  right: -32%;
+  top: -43%;
+  z-index: -2;
+  transform: rotate(15deg);
+  opacity: 17%;
+}
+
+#triangel3 img {
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  left: -22%;
+  top: 22%;
+  z-index: -2;
+  transform: rotate(57deg);
+  opacity: 20%;
+  animation: 2s ease-in-out pageloadcircle;
+}
+.projectinfo {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(57, 56, 56, 0.7);
+  border-top: 2px solid #4fc3f7;
+  border-bottom: 2px solid #4fc3f7;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.projectelement {
+  overflow: hidden;
+  width: 86%;
+  z-index: 1;
+}
+.projectelement img {
+  height: 100%;
+  width: 100%;
+}
+.projectelement:hover img {
+  transform: scale(120%);
+
+  transition: 0.4s ease;
+}
+.projectelement:hover .projectinfo {
+  opacity: 1;
+}
+.projectinfo p {
+  margin: 0;
+}
+.contactmetext h5 {
+  color: white;
+  font-size: 1rem;
+}
+.contactbtn {
+  background-color: #4fc3f7;
+  color: #393838;
+  transition: 0.5s ease;
+}
+.contactbtn:hover {
+  background-color: #7850a8;
+  color: white;
+}
+label {
+  color: white;
+}
+.form-control {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: solid 1px #7852a1 !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+textarea {
+  resize: none !important;
+}
+.contactside {
+  width: 90%;
+}
+.kotaclj {
+  height: 1.9rem;
+  width: 1.9rem;
+  animation: vrtikotac 2s infinite linear;
+}
+.navbar a:hover {
+  color: #4fc3f7 !important;
+  transition: 0.8s ease;
+}
+.education {
+  opacity: 0;
+}
