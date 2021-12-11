@@ -17,9 +17,9 @@ const Projects = (props) => {
           jects
         </h2>
       </div>
-      <div className="container projectcontainer position-relative  pt-1">
-        <div className="row g-0 h-100 w-100">
-          <div className="col-6 col-md-3">
+      <div className="container projectcontainer position-relative pt-1">
+        <div className="row g-0 h-100 w-100 ">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
               projectName={"online shopping app"}
               projectStack={"fullstack"}
@@ -35,7 +35,7 @@ const Projects = (props) => {
             />
           </div>
 
-          <div className="col-6  col-md-3">
+          <div className="col-6  col-md-3 d-flex justify-content-center">
             <ProjectTemplate
               projectName={["my music playlist app"]}
               projectStack={"fullstack"}
@@ -44,18 +44,18 @@ const Projects = (props) => {
               projectImage={props.musicimg}
             />
           </div>
-          <div className="col-6  col-md-3 ">
+          <div className="col-6  col-md-3 d-flex justify-content-center ">
             <ProjectTemplate
-              projectName={"movieAPI app"}
+              projectName={"movie API app"}
               projectStack={"frontend"}
               projectTechnologies={["react", <br />, "bootstrap"]}
               projectLink={"#"}
               projectImage={props.movieimg}
             />
           </div>
-          <div className="col-6 col-md-3 ">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
-              projectName={"hospital management system"}
+              projectName={"hospital management"}
               projectStack={"fullstack"}
               projectTechnologies={[
                 "javascript",
@@ -69,8 +69,8 @@ const Projects = (props) => {
             />
           </div>
         </div>
-        <div className="row g-0 h-100 w-100 mt-4 ">
-          <div className="col-6 col-md-3">
+        <div className="row g-0 h-100 w-100 mt-md-4 ">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
               projectName={"personal portfolio website"}
               projectStack={"frontend"}
@@ -79,7 +79,7 @@ const Projects = (props) => {
               projectImage={props.portfolioimg}
             />
           </div>
-          <div className="col-6 col-md-3">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
               projectName={"to-do list"}
               projectStack={"frontend"}
@@ -88,18 +88,18 @@ const Projects = (props) => {
               projectImage={props.todoimg}
             />
           </div>
-          <div className="col-6 col-md-3 ">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
-              projectName={"artworks & designs"}
+              projectName={["artworks &", <br />, "designs"]}
               projectStack={"UI/UX"}
               projectTechnologies={["illustrator", <br />, "photoshop"]}
               projectLink={"#"}
               projectImage={props.artworksimg}
             />
           </div>
-          <div className="col-6 col-md-3 ">
+          <div className="col-6 col-md-3 d-flex justify-content-center">
             <ProjectTemplate
-              projectName={"animations & videos"}
+              projectName={["animations &", <br />, "videos"]}
               projectStack={"UI/UX"}
               projectTechnologies={["after effects", <br />, "premiere pro"]}
               projectLink={"#"}

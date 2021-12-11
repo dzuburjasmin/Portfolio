@@ -3,19 +3,19 @@ import React from "react";
 const Skills = (props) => {
   const geo = props.geo;
   return (
-    <section className="container py-5 position-relative vh-100" id="myskills">
+    <section className="container py-5 position-relative " id="myskills">
       <div
         className="d-none d-md-block"
         id="skillsCube"
         style={{ backgroundImage: `url(${geo})` }}
       ></div>
-      <div className="container aboutme pt-3">
+      <div className="container aboutme pt-3 pb-5">
         <h2>
           <b className="bold">my</b> skills
         </h2>
       </div>
       <div className="d-md-flex skillsflex ">
-        <div className="container skillscontainer position-relative me-5">
+        <div className="container skillscontainer position-relative w-md-75">
           <h4>html</h4>
           <h4>wordpress</h4>
           <h4>javascript</h4>
@@ -37,17 +37,20 @@ const Skills = (props) => {
           <h4>php</h4>
           <h4>.net</h4>
         </div>
-        <div className="container skillstext mt-0 mt-lg-5 ">
-          <p className="text-right pt-5 ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            egestas, lacus eget semper varius, mi tellus porta velit.
+        <div className="container skillstext mt-0  ">
+          <p className="text-right pt-0 ">
+            During the years of my professional education, as well as
+            self-learning, I have{" "}
+            <b className="skillssvijetli">
+              become familiar with numerous technologies{" "}
+            </b>
+            (front-end, back-end, UI/UX, video).
             <br />
             <br />
-            Lorem dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Aenean sit amet urna. <br />
-            <br />
-            Duis semper rutrum leo, sit amet consectetur nisl consectetur sed.
-            Etiam finibus aliquet..
+            Most of my work was based on developing interactive web applications
+            with a<b className="skillstamni"> focus </b> on{" "}
+            <b className="skillstamni"> front-end </b> with a pinch of arts and
+            <b className="skillstamni"> design </b>.
           </p>
         </div>
       </div>

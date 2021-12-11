@@ -10,13 +10,10 @@ const About = (props) => {
     const [entry] = entries;
     setEducationIsInViewport(entry.intersectionRatio > 0.2);
   };
-  if (EducationIsInViewport == true) {
-    console.log("aaa");
-  }
   const options = {
     root: null,
     rootMargin: "20px",
-    threshold: 0.7,
+    threshold: 0.3,
   };
   useEffect(() => {
     const observer = new IntersectionObserver(callBackFunction, options);
@@ -52,22 +49,23 @@ const About = (props) => {
             </h2>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            egestas, lacus eget semper varius, mi tellus porta velit, ut congue
-            eros arcu nec leo. Quisque rhoncus vel metus ac vulputate. Nullam
-            vel imperdiet eros, sit amet vestibulum velit, proin pellentesque
-            elit vitae elit efficitur eget pellentesque.
+            I am a student of Software Engineering passionate for
+            <b className="skillstamni"> web development </b>. Besides the
+            university education, where the focus was put on Software
+            Development and Data Science, I dedicated my additional time to
+            learning about design, animation and video editing.
             <br />
             <br />
-            Lorem dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Aenean sit amet urna ac orci feugiat malesuada id ac dui.
-            Pellentesque vel risus ante. Maecenas lectus lectus, mattis
-            dignissim lectus ut, mattis tristique elit. <br />
+            With a foothold in Software Engineering and passion for arts and
+            design, I am mostly focused on front-end development (currently
+            working with <b className="skillstamni"> React.js </b>). My area of
+            interest is developing responsive web applications and designing
+            user interfaces based on implementation of research in
+            human-computer interaction.
             <br />
-            Duis semper rutrum leo, sit amet consectetur nisl consectetur sed.
-            Etiam finibus aliquet dolor, vel bibendum ex accumsan non. Duis
-            hendrerit tristique mattis. Phasellus et sodales arcu. Duis risus
-            purus, aliquet aliquam commodo placerat, sagittis et sapien.
+            <br />I am very devoted, hard-working and I have a substantial will
+            to learn and work on challenging projects in new environments where
+            I can grow and expand my knowledge.
           </p>
         </div>
 
@@ -77,7 +75,7 @@ const About = (props) => {
             id="Layer_1"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 505.15 570.28"
+            viewBox="0 0 575.15 570.28"
             preserveAspectRatio="none"
           >
             <path
@@ -88,7 +86,7 @@ const About = (props) => {
             />
           </svg>
           <div className="row mb-5 text-white">
-            <div className="container mb-3">
+            <div className="container mb-2">
               <div
                 className="col-6 offset-2 education"
                 style={
@@ -97,7 +95,7 @@ const About = (props) => {
                         animationName: "pageloadhi",
                         animationFillMode: "forwards",
                         animationDuration: "1.5s",
-                        animationDelay: "0.5s",
+                        animationDelay: "0s",
                         animationIterationCount: "1",
                       }
                     : {}
@@ -170,7 +168,7 @@ const About = (props) => {
               }
             >
               <EducationTemplate
-                facility={"Microsoft Web Development course"}
+                facility={"Web Development course"}
                 placeandyear={"IUS Sarajevo, 2018"}
               />
             </div>

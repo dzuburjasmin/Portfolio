@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import smoothscroll from "smoothscroll-polyfill";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
@@ -20,16 +21,15 @@ import artworksimg from "./images/artworksapp.png";
 import animationsimg from "./images/animationsapp.png";
 import todoimg from "./images/todoapp.png";
 import geo from "./images/geo.png";
-import geo2 from "./images/min.png";
 import trokut from "./images/1.png";
-import trokut2 from "./images/trokut.png";
-import trokut3 from "./images/3.png";
+import CVpdf from "./files/CV.pdf";
 
 function App() {
+  smoothscroll.polyfill();
   return (
     <div className="App">
       <NavBar />
-      <Home trokut={trokut} geo={geo} />
+      <Home trokut={trokut} geo={geo} CVpdf={CVpdf} />
       <About
         maxa={maxa}
         aboutline={aboutline}

@@ -13,7 +13,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.2;
+    opacity: 20%;
   }
 }
 @keyframes pageloadhi {
@@ -60,10 +60,10 @@
     transform: scale(100%);
   }
   25% {
-    transform: scale(87%) translateX(20px) translateY(20px);
+    transform: translateX(10px) translateY(10px);
   }
   75% {
-    transform: scale(113%) translateX(-20px) translateY(20px);
+    transform: translateX(-10px) translateY(10px);
   }
   100% {
     transform: scale(100%);
@@ -74,10 +74,10 @@
     transform: scale(100%);
   }
   25% {
-    transform: scale(113%) translateX(-20px) translateY(20px);
+    transform: translateX(-10px) translateY(10px);
   }
   75% {
-    transform: scale(87%) translateX(-20px) translateY(-20px);
+    transform: translateX(-10px) translateY(-10px);
   }
   100% {
     transform: scale(100%);
@@ -88,10 +88,10 @@
     transform: scale(100%);
   }
   25% {
-    transform: scale(87%) translateX(20px) translateY(-20px);
+    transform: translateX(10px) translateY(-10px);
   }
   75% {
-    transform: scale(113%) translateX(20px) translateY(20px);
+    transform: translateX(10px) translateY(10px);
   }
   100% {
     transform: scale(100%);
@@ -102,10 +102,10 @@
     transform: scale(100%);
   }
   25% {
-    transform: scale(110%) translateX(-20px) translateY(-20px);
+    transform: translateX(-10px) translateY(-10px);
   }
   75% {
-    transform: scale(87%) translateX(20px) translateY(-20px);
+    transform: translateX(10px) translateY(-10px);
   }
   100% {
     transform: scale(100%);
@@ -208,10 +208,7 @@ p {
   color: white;
   list-style-type: none;
 }
-.outer {
-  color: #4fc3f7;
-  text-decoration: line-through;
-}
+
 .homelinks a svg {
   fill: white;
   margin: 0.5rem;
@@ -232,8 +229,6 @@ p {
   transition: 0.8s ease;
 }
 .homelinks {
-  margin-top: -6rem;
-  margin-bottom: 5rem;
   z-index: 3;
 }
 .homecontainer {
@@ -242,13 +237,17 @@ p {
 
 @media screen and (max-width: 376px) {
   .hiImJasa {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 576px) {
   html {
     font-size: 13px;
   }
+  .projectinfo h5 {
+    font-size: 1rem;
+  }
+
   .navbar {
     background-color: rgba(39, 37, 37, 0.8);
   }
@@ -257,7 +256,7 @@ p {
   }
   .hiImJasa {
     font-size: 3rem;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
   .navbarToggle svg {
     fill: white;
@@ -281,9 +280,6 @@ p {
     left: 15%;
     top: 0%;
   }
-  .homelinks {
-    margin-top: -10rem;
-  }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   html {
@@ -298,10 +294,6 @@ p {
   #triangel3 img {
     left: 15%;
     top: 5%;
-  }
-  .homelinks {
-    margin-top: 6rem;
-    margin-bottom: -1rem;
   }
 }
 
@@ -335,7 +327,7 @@ p {
     font-size: 16px;
   }
   .hiImJasa {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
   }
   .animationContainer {
     top: -30%;
@@ -352,15 +344,31 @@ img {
 }
 
 .triangel img {
-  width: 40rem;
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
   position: absolute;
-  bottom: 0;
+  bottom: -15%;
   opacity: 0%;
-  right: -25%;
+  right: -19%;
   animation-duration: 2s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
+}
+.skillssvijetli {
+  color: #7850a8;
+}
+.skillstamni {
+  color: #4fc3f7;
+}
+#triangel3 img {
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  left: -15%;
+  top: 19%;
+  z-index: -2;
+  transform: rotate(50deg);
+  animation: 1s ease-in-out pageloadcircle forwards;
 }
 .maxica {
   max-height: 105vh;
@@ -398,6 +406,10 @@ img {
   transform: rotate(40deg);
   z-index: -1;
 }
+.homelinks {
+  position: absolute;
+  bottom: 0;
+}
 #skillsCube2 {
   position: absolute;
   background-size: 50rem;
@@ -418,147 +430,145 @@ img {
 }
 .skillscontainer h4 {
   position: absolute;
-  color: #4fc3f7;
+  color: #7850a8;
+
   font-family: GeomanistBold;
   font-size: 1.2rem;
 }
-.skillscontainer h4:hover {
-  color: #7850a8;
-  transition: 0.3s ease;
-}
+
 h4:nth-child(1) {
-  top: 13%;
-  left: 24%;
+  top: 6%;
+  left: 9%;
   animation: moveskills3 35s infinite linear;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
 h4:nth-child(2) {
   top: 30%;
-  left: 10%;
+  left: 2%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 h4:nth-child(3) {
-  top: 41%;
-  left: 32%;
-  animation: moveskills3 35s infinite linear;
-  font-size: 1.4rem;
+  top: 49%;
+  left: 12%;
+  animation: moveskills1 35s infinite linear;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
+
 h4:nth-child(4) {
   top: 61%;
-  left: 51%;
+  left: 49%;
   animation: moveskills4 35s infinite linear;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
 h4:nth-child(5) {
-  top: 9%;
-  left: 55%;
+  top: 11%;
+  left: 50%;
   animation: moveskills3 35s infinite linear;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 h4:nth-child(6) {
-  top: 50%;
-  left: 18%;
-  animation: moveskills2 35s infinite linear;
-  font-size: 1.3rem;
+  top: 20%;
+  left: 27%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1rem;
 }
-h4:nth-child(7) {
+
+h4:nth-child(14) {
   top: 82%;
   left: 57%;
   animation: moveskills3 35s infinite linear;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 h4:nth-child(8) {
   top: 10%;
-  left: 78%;
+  left: 88%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
-h4:nth-child(9) {
-  top: 44%;
-  left: 58%;
+h4:nth-child(16) {
+  top: 50%;
+  left: 70%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 h4:nth-child(10) {
   top: 63%;
-  left: 8%;
+  left: 5%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 h4:nth-child(11) {
-  top: 4%;
-  left: 38%;
+  top: 0%;
+  left: 33%;
   animation: moveskills3 35s infinite linear;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
-h4:nth-child(12) {
-  top: 60%;
-  left: 88%;
-  animation: moveskills3 35s infinite linear;
-  font-size: 1.4rem;
+h4:nth-child(7) {
+  top: 0%;
+  left: 63%;
+  animation: moveskills1 35s infinite linear;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
-h4:nth-child(13) {
-  top: 35%;
-  left: 80%;
-  animation: moveskills2 35s infinite linear;
-  font-size: 1.4rem;
-}
-h4:nth-child(14) {
+
+h4:nth-child(15) {
   top: 72%;
   left: 27%;
   animation: moveskills3 35s infinite linear;
-  font-size: 1.1rem;
-}
-h4:nth-child(15) {
-  top: 87%;
-  left: 12%;
-  animation: moveskills3 35s infinite linear;
-  font-size: 1.3rem;
-}
-h4:nth-child(16) {
-  top: 20%;
-  left: 65%;
-  animation: moveskills1 35s infinite linear;
-  font-size: 1.1rem;
-}
-h4:nth-child(17) {
-  top: 91%;
-  left: 41%;
-  animation: moveskills4 35s infinite linear;
-  font-size: 1.3rem;
-}
-h4:nth-child(18) {
-  top: 25%;
-  left: 47%;
-  animation: moveskills4 35s infinite linear;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 h4:nth-child(19) {
-  top: 66%;
-  left: 73%;
-  animation: moveskills4 35s infinite linear;
-  font-size: 1.3rem;
+  top: 26%;
+  left: 61%;
+  animation: moveskills2 35s infinite linear;
+  font-size: 1rem;
+}
+
+h4:nth-child(13) {
+  top: 84%;
+  left: 6%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
 h4:nth-child(20) {
-  top: 87%;
-  left: 78%;
+  top: 71%;
+  left: 88%;
+  animation: moveskills3 35s infinite linear;
+  font-size: 1rem;
+}
+
+h4:nth-child(17) {
+  top: 96%;
+  left: 33%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1rem;
+}
+h4:nth-child(18) {
+  top: 37%;
+  left: 35%;
   animation: moveskills1 35s infinite linear;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
-.triangle2 {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 29rem 43rem 29rem;
-  opacity: 17%;
-  border-color: transparent transparent #838383 transparent;
-  position: absolute;
-  right: -32%;
-  top: -40%;
-  z-index: -2;
-  transform: rotate(15deg);
+h4:nth-child(9) {
+  top: 34%;
+  left: 76%;
+  animation: moveskills4 35s infinite linear;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
+h4:nth-child(12) {
+  top: 91%;
+  left: 83%;
+  animation: moveskills1 35s infinite linear;
+  font-size: 1.5rem;
+  color: #4fc3f7;
+}
+
 .triangel2 img {
   width: 53rem;
   height: 48rem;
@@ -570,17 +580,6 @@ h4:nth-child(20) {
   opacity: 17%;
 }
 
-#triangel3 img {
-  width: 50rem;
-  height: 50rem;
-  position: absolute;
-  left: -22%;
-  top: 22%;
-  z-index: -2;
-  transform: rotate(57deg);
-  opacity: 20%;
-  animation: 2s ease-in-out pageloadcircle;
-}
 .projectinfo {
   position: absolute;
   bottom: 0;
@@ -609,9 +608,7 @@ h4:nth-child(20) {
 .projectelement:hover .projectinfo {
   opacity: 1;
 }
-.projectinfo p {
-  margin: 0;
-}
+
 .contactmetext h5 {
   color: white;
   font-size: 1rem;
