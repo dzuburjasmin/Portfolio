@@ -54,6 +54,17 @@ const About = (props) => {
             className="img-fluid maxica"
             src={props.maxa}
             alt="sneakerimage"
+            style={
+              EducationIsInViewport
+                ? {
+                    animationName: "pageloadcircle",
+                    animationFillMode: "forwards",
+                    animationDuration: "1s",
+                    animationDelay: "0.3s",
+                    animationIterationCount: "1",
+                  }
+                : {}
+            }
           />
           <div
             className="container aboutme pb-5 pb-md-3 pb-lg-5 ps-0"
