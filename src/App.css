@@ -13,7 +13,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 20%;
+    opacity: 0.2;
   }
 }
 @keyframes pageloadhi {
@@ -156,18 +156,18 @@ a {
 .nav-link {
   color: white !important;
 }
+.navbarToggle svg {
+  fill: white;
+}
+.navbarToggle svg:active {
+  fill: #4fc3f7;
+}
 
-#homeCircle {
-  background-size: 41rem;
-  height: 50rem;
-  width: 50rem;
-  opacity: 80%;
-  border-bottom-left-radius: 100%;
-  position: absolute;
-  right: -8%;
-  top: -30%;
-
-  z-index: -1;
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
 }
 #root {
   width: 100%;
@@ -198,7 +198,7 @@ h5 {
 p {
   color: white;
   font-size: 1rem;
-  max-width: 46ch;
+  /* max-width: 46ch; */
 }
 .homepagetext {
   animation: pageloadhi 1.5s 0s 1;
@@ -236,11 +236,33 @@ p {
 }
 
 @media screen and (max-width: 376px) {
+  html {
+    font-size: 13px;
+  }
   .hiImJasa {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    font-size: 3rem;
+  }
+  .animationContainer {
+    top: -20%;
+    height: 100vh;
+  }
+  html {
+    font-size: 13px;
+  }
+  .projectinfo h5 {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    background-color: rgba(39, 37, 37, 0.8);
+  }
+  .educationtemplate {
+    max-width: 18ch;
   }
 }
-@media screen and (max-width: 576px) {
+
+@media screen and (min-width: 376px) and (max-width: 576px) {
   html {
     font-size: 13px;
   }
@@ -275,21 +297,17 @@ p {
     top: -20%;
     height: 100vh;
   }
-
-  #triangel3 img {
-    left: 15%;
-    top: 0%;
-  }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   html {
     font-size: 14px;
   }
-  .hiImJasa {
-    margin-top: 10rem;
+  .skillsflex {
+    width: 100%;
   }
   .animationContainer {
     top: -25%;
+    height: 100%;
   }
   #triangel3 img {
     left: 15%;
@@ -298,6 +316,9 @@ p {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  p {
+    max-width: 46ch;
+  }
   html {
     font-size: 14px;
   }
@@ -309,6 +330,9 @@ p {
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  p {
+    max-width: 46ch;
+  }
   html {
     font-size: 16px;
   }
@@ -321,8 +345,17 @@ p {
   .animationContainer {
     top: -18%;
   }
+  .skillscontainer h4:nth-child(4) {
+    left: 72%;
+  }
+  .skillscontainer h4:nth-child(18) {
+    left: 40%;
+  }
 }
 @media screen and (min-width: 1200px) {
+  p {
+    max-width: 46ch;
+  }
   html {
     font-size: 16px;
   }
@@ -338,6 +371,12 @@ p {
   .triangel img {
     right: -15%;
   }
+  .skillscontainer h4:nth-child(4) {
+    left: 72%;
+  }
+  .skillscontainer h4:nth-child(18) {
+    left: 40%;
+  }
 }
 img {
   height: auto;
@@ -348,7 +387,7 @@ img {
   height: 50rem;
   position: absolute;
   bottom: -15%;
-  opacity: 0%;
+  opacity: 0;
   right: -19%;
   animation-duration: 2s;
   animation-timing-function: ease-in;
@@ -364,24 +403,38 @@ img {
   width: 50rem;
   height: 50rem;
   position: absolute;
-  left: -15%;
-  top: 19%;
+  left: -12%;
+  top: -12%;
   z-index: -2;
-  transform: rotate(50deg);
+  transform: rotate(42deg);
   animation: 1s ease-in-out pageloadcircle forwards;
 }
 .maxica {
-  max-height: 105vh;
   position: absolute;
-  opacity: 35%;
+  opacity: 0.16 !important;
   top: 0%;
+  max-height: 105vh;
 }
-
+.project {
+  opacity: 0;
+}
+.aboutme,
+.abouttext {
+  opacity: 0;
+}
 .aboutline {
   left: 8%;
   z-index: 0;
   height: 90%;
   width: 90%;
+}
+.githublink,
+.linkedinlink,
+.pdflink {
+  opacity: 0;
+  animation-name: pageloadhi;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .linedraw {
   stroke-width: 2px;
@@ -399,11 +452,11 @@ img {
 #skillsCube {
   position: absolute;
   background-size: 50rem;
-  top: -17%;
-  left: -29%;
-  width: 35rem;
-  height: 35rem;
-  transform: rotate(40deg);
+  top: -8%;
+  left: -25%;
+  width: 50rem;
+  height: 50rem;
+  transform: rotate(45deg);
   z-index: -1;
 }
 .homelinks {
@@ -413,11 +466,11 @@ img {
 #skillsCube2 {
   position: absolute;
   background-size: 50rem;
-  top: -28%;
-  left: -35%;
-  width: 45rem;
-  height: 45rem;
-  transform: rotate(49deg);
+  top: -40%;
+  left: -9%;
+  width: 50rem;
+  height: 50rem;
+  transform: rotate(34deg);
 
   z-index: -1;
 }
@@ -435,7 +488,9 @@ img {
   font-family: GeomanistBold;
   font-size: 1.2rem;
 }
-
+.skillsparagraf {
+  opacity: 0;
+}
 h4:nth-child(1) {
   top: 6%;
   left: 9%;
@@ -450,19 +505,18 @@ h4:nth-child(2) {
   font-size: 1rem;
 }
 h4:nth-child(3) {
-  top: 49%;
+  top: 43%;
   left: 12%;
   animation: moveskills1 35s infinite linear;
   font-size: 1.5rem;
   color: #4fc3f7;
 }
 
-h4:nth-child(4) {
+h4:nth-child(16) {
   top: 61%;
-  left: 49%;
+  left: 54%;
   animation: moveskills4 35s infinite linear;
-  font-size: 1.5rem;
-  color: #4fc3f7;
+  font-size: 1rem;
 }
 h4:nth-child(5) {
   top: 11%;
@@ -489,11 +543,12 @@ h4:nth-child(8) {
   animation: moveskills2 35s infinite linear;
   font-size: 1rem;
 }
-h4:nth-child(16) {
-  top: 50%;
-  left: 70%;
+h4:nth-child(4) {
+  top: 54%;
+  left: 85%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
 h4:nth-child(10) {
   top: 63%;
@@ -521,11 +576,12 @@ h4:nth-child(15) {
   animation: moveskills3 35s infinite linear;
   font-size: 1rem;
 }
-h4:nth-child(19) {
-  top: 26%;
+h4:nth-child(9) {
+  top: 22%;
   left: 61%;
   animation: moveskills2 35s infinite linear;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: #4fc3f7;
 }
 
 h4:nth-child(13) {
@@ -549,17 +605,16 @@ h4:nth-child(17) {
   font-size: 1rem;
 }
 h4:nth-child(18) {
-  top: 37%;
-  left: 35%;
+  top: 40%;
+  left: 49%;
   animation: moveskills1 35s infinite linear;
   font-size: 1rem;
 }
-h4:nth-child(9) {
-  top: 34%;
-  left: 76%;
+h4:nth-child(19) {
+  top: 39%;
+  left: 82%;
   animation: moveskills4 35s infinite linear;
-  font-size: 1.5rem;
-  color: #4fc3f7;
+  font-size: 1rem;
 }
 h4:nth-child(12) {
   top: 91%;
@@ -577,7 +632,7 @@ h4:nth-child(12) {
   top: -43%;
   z-index: -2;
   transform: rotate(15deg);
-  opacity: 17%;
+  opacity: 0.17 !important;
 }
 
 .projectinfo {
@@ -616,11 +671,14 @@ h4:nth-child(12) {
 .contactbtn {
   background-color: #4fc3f7;
   color: #393838;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
 }
 .contactbtn:hover {
   background-color: #7850a8;
   color: white;
+}
+.contactbtn:focus {
+  box-shadow: none;
 }
 label {
   color: white;

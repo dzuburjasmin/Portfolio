@@ -4,12 +4,20 @@ import EducationTemplate from "./EducationTemplate";
 const About = (props) => {
   const kotaclj = props.kotaclj;
   const targetRef = useRef(null);
+  const targetRef2 = useRef(null);
+
   const [EducationIsInViewport, setEducationIsInViewport] = useState(false);
+  const [AboutIsInViewport, setAboutIsInViewport] = useState(false);
 
   const callBackFunction = (entries) => {
     const [entry] = entries;
     setEducationIsInViewport(entry.intersectionRatio > 0.2);
   };
+  const callBackFunction2 = (entries) => {
+    const [entry] = entries;
+    setAboutIsInViewport(entry.intersectionRatio > 0.2);
+  };
+
   const options = {
     root: null,
     rootMargin: "20px",
@@ -20,6 +28,12 @@ const About = (props) => {
     const currentTarget = targetRef.current;
     if (currentTarget) observer.observe(currentTarget);
   }, [targetRef, options]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(callBackFunction2, options);
+    const currentTarget = targetRef.current;
+    if (currentTarget) observer.observe(currentTarget);
+  }, [targetRef2, options]);
+
   return (
     <section
       className="container position-relative  pt-5  text-left "
@@ -35,37 +49,94 @@ const About = (props) => {
       </div>
 
       <div className="d-md-flex pt-3 ">
-        <div className="container aboutmecontainer ">
+        <div className="container aboutmecontainer" ref={targetRef2}>
           <img
             className="img-fluid maxica"
             src={props.maxa}
             alt="sneakerimage"
           />
-          <div className="container aboutme pb-5 pb-md-3 pb-lg-5 ps-0">
+          <div
+            className="container aboutme pb-5 pb-md-3 pb-lg-5 ps-0"
+            style={
+              EducationIsInViewport
+                ? {
+                    animationName: "pageloadhi",
+                    animationFillMode: "forwards",
+                    animationDuration: "1s",
+                    animationDelay: "0.3s",
+                    animationIterationCount: "1",
+                  }
+                : {}
+            }
+          >
             <h2>
               ab
               <img src={kotaclj} className="kotaclj" />
               ut <b className="bold">me</b>
             </h2>
           </div>
-          <p>
+          <p
+            className="abouttext"
+            style={
+              EducationIsInViewport
+                ? {
+                    animationName: "pageloadhi",
+                    animationFillMode: "forwards",
+                    animationDuration: "1s",
+                    animationDelay: "0.5s",
+                    animationIterationCount: "1",
+                  }
+                : {}
+            }
+          >
             I am a student of Software Engineering passionate for
-            <b className="skillstamni"> web development </b>. Besides the
-            university education, where the focus was put on Software
-            Development and Data Science, I dedicated my additional time to
-            learning about design, animation and video editing.
-            <br />
-            <br />
+            <b className="skillstamni"> web development </b>. Over the years of
+            my studies, besides Software Engineering and Data Science I have
+            also dedicated myself to design, as well as video editing and
+            animation.
+          </p>
+
+          <p
+            className="abouttext"
+            style={
+              EducationIsInViewport
+                ? {
+                    animationName: "pageloadhi",
+                    animationFillMode: "forwards",
+                    animationDuration: "1s",
+                    animationDelay: "0.8s",
+                    animationIterationCount: "1",
+                  }
+                : {}
+            }
+          >
             With a foothold in Software Engineering and passion for arts and
-            design, I am mostly focused on front-end development (currently
-            working with <b className="skillstamni"> React.js </b>). My area of
-            interest is developing responsive web applications and designing
-            user interfaces based on implementation of research in
+            design, I am mostly focused on{" "}
+            <b className="skillstamni"> front-end </b> development (currently
+            working with <b className="skillstamni"> React.js</b>). <br />
+            Currently, my areas of expertise are developing responsive web
+            applications and designing user interfaces based on principles of
             human-computer interaction.
-            <br />
-            <br />I am very devoted, hard-working and I have a substantial will
-            to learn and work on challenging projects in new environments where
-            I can grow and expand my knowledge.
+          </p>
+
+          <p
+            className="abouttext"
+            style={
+              EducationIsInViewport
+                ? {
+                    animationName: "pageloadhi",
+                    animationFillMode: "forwards",
+                    animationDuration: "1s",
+                    animationDelay: "1.2s",
+                    animationIterationCount: "1",
+                  }
+                : {}
+            }
+          >
+            I am very devoted, hard-working and I have a substantial will to{" "}
+            <b className="skillstamni"> learn and work </b> on challenging
+            projects in new environments where I can grow and expand my
+            knowledge.
           </p>
         </div>
 
