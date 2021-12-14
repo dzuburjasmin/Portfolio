@@ -28,9 +28,10 @@ const About = (props) => {
     const currentTarget = targetRef.current;
     if (currentTarget) observer.observe(currentTarget);
   }, [targetRef, options]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(callBackFunction2, options);
-    const currentTarget = targetRef.current;
+    const currentTarget = targetRef2.current;
     if (currentTarget) observer.observe(currentTarget);
   }, [targetRef2, options]);
 
@@ -38,6 +39,7 @@ const About = (props) => {
     <section
       className="container position-relative  pt-5  text-left "
       id="aboutme"
+      ref={targetRef2}
     >
       <div className="triangel">
         <img
@@ -49,27 +51,16 @@ const About = (props) => {
       </div>
 
       <div className="d-md-flex pt-3 ">
-        <div className="container aboutmecontainer" ref={targetRef2}>
+        <div className="container aboutmecontainer">
           <img
             className="img-fluid maxica"
             src={props.maxa}
             alt="sneakerimage"
-            style={
-              EducationIsInViewport
-                ? {
-                    animationName: "pageloadcircle",
-                    animationFillMode: "forwards",
-                    animationDuration: "1s",
-                    animationDelay: "0.3s",
-                    animationIterationCount: "1",
-                  }
-                : {}
-            }
           />
           <div
             className="container aboutme pb-5 pb-md-3 pb-lg-5 ps-0"
             style={
-              EducationIsInViewport
+              AboutIsInViewport
                 ? {
                     animationName: "pageloadhi",
                     animationFillMode: "forwards",
@@ -89,7 +80,7 @@ const About = (props) => {
           <p
             className="abouttext"
             style={
-              EducationIsInViewport
+              AboutIsInViewport
                 ? {
                     animationName: "pageloadhi",
                     animationFillMode: "forwards",
@@ -110,7 +101,7 @@ const About = (props) => {
           <p
             className="abouttext"
             style={
-              EducationIsInViewport
+              AboutIsInViewport
                 ? {
                     animationName: "pageloadhi",
                     animationFillMode: "forwards",
@@ -133,7 +124,7 @@ const About = (props) => {
           <p
             className="abouttext"
             style={
-              EducationIsInViewport
+              AboutIsInViewport
                 ? {
                     animationName: "pageloadhi",
                     animationFillMode: "forwards",

@@ -23,6 +23,7 @@ import todoimg from "./images/todoapp.png";
 import geo from "./images/geo.png";
 import trokut from "./images/1.png";
 import CVpdf from "./files/CV.pdf";
+import Footer from "./components/Footer";
 
 function App() {
   smoothscroll.polyfill();
@@ -50,7 +51,8 @@ function App() {
         shoppingimg={shoppingimg}
         trokut={trokut}
       />
-      <Contact kotaclj={kotacpl} geo={geo} />
+      <Contact kotaclj={kotacpl} geo={geo} CVpdf={CVpdf} />
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
+
 const Contact = (props) => {
   const geo = props.geo;
   const kotaclj = props.kotaclj;
@@ -46,7 +47,7 @@ const Contact = (props) => {
 
   return (
     <section
-      className="container pt-5  text-left position-relative"
+      className="container pt-5 pb-3  text-left position-relative"
       id="contactme"
       ref={targetRef}
     >
@@ -72,7 +73,7 @@ const Contact = (props) => {
               ntact <b className="bold">me</b>
             </h2>
           </div>
-          <div className="container ps-1 pb-4 contactmetext">
+          <div className="container ps-1 mb-4 contactmetext">
             <p
               className="aboutme"
               style={
@@ -87,8 +88,8 @@ const Contact = (props) => {
                   : {}
               }
             >
-              I am <b className="skillstamni"> interested </b> in all kinds of
-              engagements, especially in ambitious and challenging environments.
+              I am interested in all kinds of engagements, especially in
+              ambitious and challenging environments.
             </p>
             <p
               className="aboutme"
@@ -104,8 +105,12 @@ const Contact = (props) => {
                   : {}
               }
             >
-              If you have any type of offer, don't hesitate to{" "}
-              <b className="skillstamni"> contact me </b>.
+              If you have any type of offer, don't hesitate to contact me. Also,
+              you can{" "}
+              <a className="downloadmycv" href={props.CVpdf} download>
+                download my CV
+              </a>{" "}
+              for more details about reaching out to me.
             </p>
           </div>
           <form className="ps-1 d-md-flex flex-column " onSubmit={sendEmail}>
@@ -124,7 +129,12 @@ const Contact = (props) => {
               }
             >
               <label for="name">name:</label>
-              <input type="text" className="form-control" name="name" />
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                required
+              />
             </div>
             <div
               className="form-group mb-4 aboutme"
@@ -141,7 +151,12 @@ const Contact = (props) => {
               }
             >
               <label for="email">email:</label>
-              <input type="email" className="form-control" name="email" />
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                required
+              />
             </div>
             <div
               className="form-group mb-4 aboutme"
@@ -159,15 +174,16 @@ const Contact = (props) => {
             >
               <label for="message">message</label>
               <textarea
-                className="form-control mb-3"
+                className="form-control mb-2"
                 id="message"
                 name="message"
                 rows="3"
+                required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="btn contactbtn align-self-end aboutme"
+              className="btn  contactbtn align-self-end aboutme"
               style={
                 ContactIsInViewport
                   ? {

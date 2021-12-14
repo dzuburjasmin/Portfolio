@@ -16,6 +16,7 @@
     opacity: 0.2;
   }
 }
+
 @keyframes pageloadhi {
   0% {
     opacity: 0;
@@ -24,6 +25,22 @@
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@keyframes pageloadmaxa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes skillshi {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes vrtikotac {
@@ -198,7 +215,6 @@ h5 {
 p {
   color: white;
   font-size: 1rem;
-  /* max-width: 46ch; */
 }
 .homepagetext {
   animation: pageloadhi 1.5s 0s 1;
@@ -222,7 +238,7 @@ p {
 }
 .homelinks a svg:hover {
   fill: #4fc3f7;
-  transition: 0.8s ease;
+  transition: 0.4s ease;
 }
 .homelinks svg:hover {
   fill: #4fc3f7;
@@ -238,6 +254,9 @@ p {
 @media screen and (max-width: 376px) {
   html {
     font-size: 13px;
+  }
+  .maxica {
+    opacity: 0.1;
   }
   .hiImJasa {
     margin-top: 1.5rem;
@@ -266,10 +285,12 @@ p {
   html {
     font-size: 13px;
   }
+  .maxica {
+    opacity: 0.1;
+  }
   .projectinfo h5 {
     font-size: 1rem;
   }
-
   .navbar {
     background-color: rgba(39, 37, 37, 0.8);
   }
@@ -316,7 +337,7 @@ p {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  p {
+  .aboutmecontainer p {
     max-width: 46ch;
   }
   html {
@@ -330,7 +351,7 @@ p {
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-  p {
+  .aboutmecontainer p {
     max-width: 46ch;
   }
   html {
@@ -353,7 +374,7 @@ p {
   }
 }
 @media screen and (min-width: 1200px) {
-  p {
+  .aboutmecontainer p {
     max-width: 46ch;
   }
   html {
@@ -412,7 +433,7 @@ img {
 .maxica {
   opacity: 0;
   position: absolute;
-  opacity: 0.16 !important;
+  opacity: 0.15 !important;
   top: 0%;
   max-height: 105vh;
 }
@@ -429,6 +450,7 @@ img {
   height: 90%;
   width: 90%;
 }
+
 .githublink,
 .linkedinlink,
 .pdflink {
@@ -474,6 +496,14 @@ img {
   transform: rotate(34deg);
 
   z-index: -1;
+}
+.downloadmycv {
+  text-decoration: underline;
+  color: #4fc3f7;
+  cursor: pointer;
+}
+.downloadmycv:hover {
+  color: #7850a8;
 }
 .skillscontainer {
   min-height: 60vh;
@@ -710,4 +740,18 @@ textarea {
 }
 .education {
   opacity: 0;
+}
+.footer {
+  background-color: rgba(120, 82, 161, 0.7);
+}
+.footerheadings {
+  font-family: GeomanistBold;
+  border-bottom: 1px solid #393838;
+}
+
+.footeruls {
+  border-bottom: 1px solid #393838;
+}
+.footer a {
+  color: white;
 }

@@ -28,7 +28,7 @@ const Skills = (props) => {
   }, [targetRef, options]);
   useEffect(() => {
     const observer = new IntersectionObserver(callBackFunction2, options);
-    const currentTarget = targetRef.current;
+    const currentTarget = targetRef2.current;
     if (currentTarget) observer.observe(currentTarget);
   }, [targetRef2, options]);
 
@@ -67,7 +67,7 @@ const Skills = (props) => {
           style={
             SkillsIsInViewport
               ? {
-                  animationName: "pageloadhi",
+                  animationName: "skillshi",
                   animationFillMode: "forwards",
                   animationDuration: "1s",
                   animationDelay: "0.6s",
